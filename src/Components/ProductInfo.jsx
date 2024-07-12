@@ -1,4 +1,5 @@
 import React from "react";
+import Cards from "./Cards";
 
 const ProductInfo = () => {
   return (
@@ -6,7 +7,7 @@ const ProductInfo = () => {
       <div className="section-container section-container-mobile">
         <div className="section-img">
           <img
-            src="/src/assets/tshirtmodel.jpeg"
+            src="/platinumthreads/src/assets/tshirtmodel.jpeg"
             alt=""
             className="product-info-img"
           />
@@ -42,7 +43,13 @@ const ProductInfo = () => {
           </p>
         </div>
         <div className="section-img">
-          <img src="/src/assets/shirttag.jpeg" alt="" className="product-info-img" />
+          <img src="/platinumthreads/src/assets/shirttag.jpeg" alt="" className="product-info-img" />
+        </div>
+      </div>
+      <div className="section-container featured">
+        <h2 className="info-title">Feature Products</h2>
+        <div className="featured-card-container">
+        <Cards />
         </div>
       </div>
     </div>

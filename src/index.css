@@ -332,6 +332,17 @@ body {
   font-size: 1.5vw;
 }
 
+.featured {
+  flex-direction: column;
+}
+
+.featured-card-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1800px;
+}
+
 @media screen and (max-width: 800px) {
   .product-info-container {
     padding: 25px 0;
@@ -356,5 +367,296 @@ body {
   
   .info-text {
     font-size: 2.8vw;
+  }
+}
+
+/* Contact Styles */
+.footer {
+  background: #fff;
+
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+label {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.menu-opt {
+  font-size: 18px;
+  text-align: left;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+/* .label-cbox {
+  display: flex;
+  font-size: 18px;
+  margin-left: 10px;
+  min-height: 1.3rem;
+}
+
+.input-cbox {
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 1rem;
+  margin-left: 25px;
+  margin-right: 15px;
+} */
+
+#user_name,
+#user_email,
+select {
+  line-height: 2rem;
+  background: #fff;
+  border: 2px solid black;
+  padding: 0 5px;
+}
+
+select {
+  height: 60px;
+}
+
+textarea {
+  background: #fff;
+  border: 2px solid black;
+  padding: 0 5px;
+}
+
+.email-btn {
+  padding: 10px;
+  font-size: 18px;
+  display: block;
+  margin: 25px auto;
+  width: 50%;
+  font-family: "Kalnia";
+  background: black;
+  color: #fff;
+  cursor: pointer;
+}
+
+.email-btn:hover {
+  background-color: green;
+  border: 2px solid black;
+  transition: 0.3s;
+}
+
+/* Menu Card Styles */
+
+.cards {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4rem;
+  font-family: "PT Sans", sans-serif;
+}
+
+.cardsItems {
+  display: contents; /* ensure that ul doesn't interfere with grid */
+}
+
+.cardsItemLink {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.cardItemPicWrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%;
+  overflow: hidden;
+}
+
+.fadeImg {
+  animation-name: fade-img;
+  animation-duration: 2s;
+}
+
+.cardItemPicWrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  padding: 6px 8px;
+  max-width: calc(100% - 60px);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #a559db;
+  box-sizing: border-box;
+}
+
+.cardItemImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.2s linear;
+
+}
+
+.cardItemImg:hover {
+  transform: scale(1.1);
+}
+
+.cardsItemInfo {
+  padding: 20px 30px 30px;
+}
+
+.cardsItemText {
+  color: black;
+  font-size: 20px;
+  line-height: 24px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cardsItemText:hover {
+  color: #a559db;
+}
+
+@media screen and (max-width: 1024px) {
+  .cards {
+    padding: 1rem;
+  }
+
+  .cardsItem {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Popup styles */
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  border-radius: 16px;
+  animation: slideup 0.3s linear;
+  -webkit-animation: slideup 0.3s linear;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  transition: 1s;
+  max-height: 80%;
+  overflow-y: scroll;
+}
+
+@keyframes slideup {
+  from {
+    top: 80%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+.popupContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 80%; /* Adjust width as needed */
+  max-width: 500px; /* Maximum width for the popup */
+}
+
+.product-img {
+  display: flex;
+  margin: 25px auto;
+  width: 70%;
+  border-radius: 8px;
+}
+
+.product-desc {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.close-btn {
+  position: sticky;
+  top: 10px;
+  left: 95%;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 900px) {
+  .popup {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+    background: #fff2e1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    border-radius: 16px;
+    animation: slideupmobile 0.3s linear;
+    -webkit-animation: slideupmobile 0.3s linear;
+    perspective: 1000;
+    -webkit-perspective: 1000;
+    transition: 1s;
+  }
+
+  .product-img {
+    width: 85%;
+  }
+
+  @keyframes slideupmobile {
+    from {
+      top: 80%;
+    }
+    to {
+      top: 55%;
+    }
+  }
+
+  .close-btn {
+    top: 10px;
+    left: 320px;
   }
 }

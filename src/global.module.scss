@@ -1,0 +1,118 @@
+.fadeRight {
+  animation: fadeRight 0.7s linear;
+  transition: 1s;
+  -webkit-animation: fadeRight 0.7s linear;
+  perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    -webkit-transform: translateX(-1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.7s linear;
+  -webkit-animation: fadeIn 0.7s linear;
+  transition: 1s;
+  perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+.imgFade {
+  animation: imgFade 1s linear;
+  -webkit-animation: imgFade 1s linear;
+  transition: 1s;
+  perspective: 1000;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes imgFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+    -webkit-transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}
+
+//  Cards
+
+.cardsContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.cardsWrapper {
+  position: relative;
+  margin: 50px 0 45px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* responsive grid */
+  gap: 1.5rem; /* space between cards */
+}
+
+.cardsItem {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  overflow: hidden;
+  text-decoration: none;
+  background: white;
+}
+
+// Contact
+.contactInfo {
+  text-align: left;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-top: 50px;
+}
+
+.icons {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .icons {
+    margin-top: 50px;
+  }
+}

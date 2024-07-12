@@ -8,7 +8,7 @@ const Hero = () => {
         <p className="hero-sub">Let your style shine</p>
       </div>
       <div className="hero-img">
-        <img src="/src/assets/shadesmodel.png" alt="" className="hero-photo" />
+        <img src="/platinumthreads/src/assets/shadesmodel.png" alt="" className="hero-photo" />
       </div>
     </div>
   );
