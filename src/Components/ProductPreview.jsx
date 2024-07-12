@@ -26,7 +26,7 @@ function ProductPreviewPopup(props) {
             src={props.product.src}
             alt={props.product.text}
           /> ) : (<div>Loading...</div>) }
-          <h2>{props.product.text}</h2>
+          <h2 className='pop-up-title'>{props.product.text}</h2>
           <p className="product-desc">{props.product.description}</p>
           {/* Add other product details as needed */}
         </div>

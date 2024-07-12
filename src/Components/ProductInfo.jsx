@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "./Cards";
+import FeaturedCards from "./FeaturedCards";
 
 const ProductInfo = () => {
   return (
@@ -14,7 +14,7 @@ const ProductInfo = () => {
         </div>
         <div className="section-text">
           <h2 className="info-title">
-            Platinum style for Platinum people
+            Platinum styles for Platinum people
           </h2>
           <p className="info-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -48,10 +48,8 @@ const ProductInfo = () => {
       </div>
       <div className="section-container featured">
         <h2 className="info-title">Feature Products</h2>
-        <div className="featured-card-container">
-        <Cards />
-        </div>
       </div>
+      <FeaturedCards />
     </div>
   );
 };

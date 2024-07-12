@@ -15,7 +15,7 @@ const Navbar = () => {
       <nav className={'navbar'} >
         <div className="navbar-container">
           <a href="#top" className="navbar-logo">
-            Platinum Threads
+            <img className="logo" src="/platinumthreads/src/assets/pthreads.png" alt="" srcset="" />
           </a>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />{" "}
@@ -42,14 +42,6 @@ const Navbar = () => {
                 className="nav-links"
                 onClick={closeMobileMenu}>
                 Womens
-              </AnchorLink>
-            </li>
-            <li className="nav-item">
-              <AnchorLink
-                href="#about"
-                className="nav-links"
-                onClick={closeMobileMenu}>
-                Contact
               </AnchorLink>
             </li>
           </ul>
