@@ -15,7 +15,7 @@ const Navbar = () => {
       <nav className={'navbar'} >
         <div className="navbar-container">
           <a href="#top" className="navbar-logo">
-            <img className="logo" src="/platinumthreads/src/assets/pthreads.png" alt="" srcset="" />
+            <img className="logo" src="/ProductTemplate/src/assets/pthreads.png" alt="" srcset="" />
           </a>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />{" "}

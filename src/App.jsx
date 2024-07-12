@@ -16,7 +16,7 @@ function App() {
       <ScrollToTop />
       <Navbar />
         <Routes location={location} key={location.pathname}>
-          <Route path="/platinumthreads" element={<Main />}></Route>
+          <Route path="/ProductTemplate" element={<Main />}></Route>
         </Routes>
       <Footer />
       </Router>
