@@ -7,7 +7,7 @@ const ProductInfo = () => {
       <div className="section-container section-container-mobile">
         <div className="section-img">
           <img
-            src="/ProductTemplate/src/assets/tshirtmodel.jpeg"
+            src="/ProductTemplate/assets/tshirtmodel.jpeg"
             alt=""
             className="product-info-img"
           />
@@ -43,7 +43,7 @@ const ProductInfo = () => {
           </p>
         </div>
         <div className="section-img">
-          <img src="/ProductTemplate/src/assets/shirttag.jpeg" alt="" className="product-info-img" />
+          <img src="/ProductTemplate/assets/shirttag.jpeg" alt="" className="product-info-img" />
         </div>
       </div>
       <div className="section-container featured">
