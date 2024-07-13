@@ -1,80 +1,79 @@
 .side-menu {
-    display: inline-block;
-    width: 300px;
-    height: 100vh;
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-    overflow: hidden;
-    background: silver;
+  display: inline-block;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 80px;
+  left: -100%;
+  opacity: 1;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  background: silver;
 }
 
 .side-menu.active {
-    background: silver;
-    left: 52px;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 999;
+  background: silver;
+  left: 52px;
+  opacity: 1;
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+
+.side-menu-icon {
+  display: block;
+  position: fixed;
+  top: 80px;
+  left: 90px;
+  transform: translate(-100%, 40%);
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.fa-times {
+  color: black;
+  font-size: 2rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #000;
+  margin: 80px auto;
+  width: 156px;
+}
+
+.filter-label {
+  font-size: 28px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cbox {
+  color: #fff;
+}
+
+@media screen and (max-width: 1800px) {
+  .side-menu.active {
+    left: 0;
   }
 
   .side-menu-icon {
     display: block;
     position: fixed;
     top: 80px;
-    left: 90px;
+    left: 40px;
     transform: translate(-100%, 40%);
     font-size: 1.8rem;
     cursor: pointer;
     z-index: 999;
   }
-
-  .fa-times {
-    color: black;
-    font-size: 2rem;
-  }
-
-  .filter-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    color: #000;
-    margin: 80px auto;
-    width: 156px;
-  }
-
-  .filter-label {
-    font-size: 28px;
-  }
-
-  .options {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .cbox {
-   color: #fff;
-  }
-
-
-  @media screen and (max-width: 1800px) {
-    .side-menu.active {
-        left: 0;
-      }
-    
-      .side-menu-icon {
-        display: block;
-        position: fixed;
-        top: 80px;
-        left: 40px;
-        transform: translate(-100%, 40%);
-        font-size: 1.8rem;
-        cursor: pointer;
-        z-index: 999;
-      }
-  }
+}
