@@ -34,37 +34,4 @@
     .footer-container {
       flex-direction: column;
     }
-  
-    .contact-title {
-      margin-bottom: -25px;
-    }
-  
-    #contact {
-      padding: 10px;
-    }
-  
-    .email-form-container {
-      flex-direction: column;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  
-    .form {
-      width: 100%;
-      margin-top: 50px;
-    }
-  
-    .contact-msg {
-      width: 100%;
-      margin-top: -30px;
-    }
-  
-    .qrCode {
-      width: 200px;
-      margin-top: 0;
-    }
-  
-    .email-btn {
-      font-size: 16px;
-    }
   }
