@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import "../Styles/Footer.css"
 
 const Footer = () => {
   const form = useRef();

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from "react-router-dom";
+import "../Styles/Navbar.css"
 
 
 
@@ -15,7 +17,7 @@ const Navbar = () => {
       <nav className={'navbar'} >
         <div className="navbar-container">
           <a href="#top" className="navbar-logo">
-            <img className="logo" src="/ProductTemplate/assets/pthreads.png" alt="" srcset="" />
+            <img className="logo" src="/ProductTemplate/assets/pthreads.png" alt="" />
           </a>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />{" "}
@@ -23,26 +25,26 @@ const Navbar = () => {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <AnchorLink href="#top" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Home
-              </AnchorLink>
+              </Link>
             </li>
             
             <li className="nav-item">
-              <AnchorLink
-                href="#menu"
+              <Link
+                to="/mens"
                 className="nav-links"
                 onClick={closeMobileMenu}>
                 Mens
-              </AnchorLink>
+              </Link>
             </li>
             <li className="nav-item">
-              <AnchorLink
-                href="#contact"
+              <Link
+                to="/womens"
                 className="nav-links"
                 onClick={closeMobileMenu}>
                 Womens
-              </AnchorLink>
+              </Link>
             </li>
           </ul>
         </div>

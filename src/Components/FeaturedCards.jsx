@@ -3,6 +3,8 @@ import Carditems from "./Carditems";
 import styles from "../global.module.scss";
 import { useInView } from "react-intersection-observer";
 import ProductPreviewPopup from "./ProductPreview";
+import "../Styles/Cards.css"
+import "../Styles/ProductPreview.css"
 
 function Cards() {
   const [selectedProduct, setselectedProduct] = useState(null);

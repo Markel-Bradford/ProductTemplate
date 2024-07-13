@@ -1,5 +1,6 @@
 import React from "react";
 import FeaturedCards from "./FeaturedCards";
+import "../Styles/ProductInfo.css"
 
 const ProductInfo = () => {
   return (
