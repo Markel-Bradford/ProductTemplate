@@ -9,6 +9,7 @@
   transition: all 0.5s ease;
   overflow: hidden;
   background: silver;
+  z-index: 999;
 }
 
 .side-menu.active {
@@ -72,6 +73,7 @@
     height: 40px;
     font-size: 16px;
     font-family: "Open Sans";
+    color: #000;
 }
 
 .apply-button:hover {
