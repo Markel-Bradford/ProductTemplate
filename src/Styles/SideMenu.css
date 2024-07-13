@@ -55,10 +55,29 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  font-family: "Open Sans";
 }
 
 .cbox {
   color: #fff;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.apply-button {
+    margin-top: 25px;
+    background: #fff;
+    border: 2px solid black;
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    font-family: "Open Sans";
+}
+
+.apply-button:hover {
+    background-color: #71706e;
+    color: #fff;
+    transition: .2s;
 }
 
 @media screen and (max-width: 1800px) {

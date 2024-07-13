@@ -7,6 +7,7 @@ import MensApperal from "../Pages/MensApperal";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import ScrollToTop from "../ScrollToTop";
+import Contact from "../Pages/Contact";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -20,7 +21,7 @@ function AnimatedRoutes() {
           <Route path="/" element={<Main />} />
           <Route path="/mens" element={<MensApperal/>} />
           <Route path="/womens" element={<WomensApperal/>} />
-          {/* <Route path="/contact" element={<Contact/>} /> */}
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </AnimatePresence>
       <Footer />

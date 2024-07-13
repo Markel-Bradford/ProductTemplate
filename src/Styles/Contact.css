@@ -1,161 +1,113 @@
-/* Contact Styles */
-.footer {
-    background: #fff;
-    padding: 50px 0 0 0;
-  }
-  
-  .footer-items{
-    display: flex;
-    gap: 20px;
-  }
-  
-  .footer-links {
-    color: #000;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+.contact-container {
+  display: flex;
+  height: 80vh;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+label {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.menu-opt {
+  font-size: 18px;
+  text-align: left;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+#user_name,
+#user_email,
+select {
+  line-height: 2rem;
+  background: #fff;
+  border: 2px solid black;
+  padding: 0 5px;
+}
+
+select {
+  height: 60px;
+}
+
+textarea {
+  background: #fff;
+  border: 2px solid black;
+  padding: 0 5px;
+}
+
+.email-btn {
+  padding: 10px;
+  font-size: 18px;
+  display: block;
+  margin: 25px auto;
+  width: 50%;
+  font-family: "Kalnia";
+  background: black;
+  color: #fff;
+  cursor: pointer;
+}
+
+.email-btn:hover {
+  background-color: green;
+  border: 2px solid black;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 800px) {
   .contact-container {
-    display: flex;
     flex-direction: column;
   }
-  
-  .contact-title {
-    text-align: center;
+
+  .contact-info {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: -150px;
   }
-  
+
+  .email-form-container {
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .form {
     width: 100%;
-    display: flex;
   }
-  
-  .email-form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 320px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-  
-  label {
-    margin: 5px 0;
-    font-size: 18px;
-  }
-  
-  .menu-opt {
-    font-size: 18px;
-    text-align: left;
-    margin: 0 0 10px 0;
-    padding: 0;
-  }
-  
-  /* .label-cbox {
-    display: flex;
-    font-size: 18px;
-    margin-left: 10px;
-    min-height: 1.3rem;
-  }
-  
-  .input-cbox {
-    display: inline-block;
-    vertical-align: middle;
-    min-height: 1rem;
-    margin-left: 25px;
-    margin-right: 15px;
-  } */
-  
-  #user_name,
-  #user_email,
-  select {
-    line-height: 2rem;
-    background: #fff;
-    border: 2px solid black;
-    padding: 0 5px;
-  }
-  
-  select {
-    height: 60px;
-  }
-  
-  textarea {
-    background: #fff;
-    border: 2px solid black;
-    padding: 0 5px;
-  }
-  
+
   .email-btn {
-    padding: 10px;
-    font-size: 18px;
-    display: block;
-    margin: 25px auto;
-    width: 50%;
-    font-family: "Kalnia";
-    background: black;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .email-btn:hover {
-    background-color: green;
-    border: 2px solid black;
-    transition: 0.3s;
-  }
-  
-  .ownership {
-    border-top: 2px solid #100c10;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 80px;
-    font-weight: 700;
+    justify-content: space-between;
+    font-size: 16px;
+    width: 60%;
   }
-  
-  @media screen and (max-width: 800px) {
-    .footer-container {
-      flex-direction: column;
-    }
-  
-    .contact-title {
-      margin-bottom: -25px;
-    }
-  
-    #contact {
-      padding: 10px;
-    }
-  
-    .email-form-container {
-      flex-direction: column;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  
-    .form {
-      width: 100%;
-      margin-top: 50px;
-    }
-  
-    .contact-msg {
-      width: 100%;
-      margin-top: -30px;
-    }
-  
-    .qrCode {
-      width: 200px;
-      margin-top: 0;
-    }
-  
-    .email-btn {
-      font-size: 16px;
-    }
-  }
+}
