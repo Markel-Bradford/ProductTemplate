@@ -57,6 +57,10 @@
     align-items: flex-start;
   }
 
+  .cbox {
+   color: #fff;
+  }
+
 
   @media screen and (max-width: 1800px) {
     .side-menu.active {

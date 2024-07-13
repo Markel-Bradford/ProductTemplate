@@ -37,6 +37,7 @@ const SideMenu = ({ filters, setFilters }) => {
         <div>
           <label>
             <input
+            className="cbox"
               type="checkbox"
               value="T-Shirt"
               checked={filters.label.includes("T-Shirt")}
@@ -48,6 +49,7 @@ const SideMenu = ({ filters, setFilters }) => {
         <div>
           <label>
             <input
+            className="cbox"
               type="checkbox"
               value="Jeans"
               checked={filters.label.includes("Jeans")}
@@ -59,6 +61,7 @@ const SideMenu = ({ filters, setFilters }) => {
         <div>
           <label>
             <input
+            className="cbox"
               type="checkbox"
               value="Joggers"
               checked={filters.label.includes("Joggers")}
@@ -70,6 +73,7 @@ const SideMenu = ({ filters, setFilters }) => {
         <div>
           <label>
             <input
+            className="cbox"
               type="checkbox"
               value="Jackets"
               checked={filters.label.includes("Jackets")}
