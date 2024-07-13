@@ -3,22 +3,27 @@ import Carditems from "./Carditems";
 import styles from "../global.module.scss";
 import { useInView } from "react-intersection-observer";
 import ProductPreviewPopup from "./ProductPreview";
+import SideMenu from "./SideMenu";
 import "../Styles/Cards.css"
 
 function MensCards() {
   const [selectedProduct, setselectedProduct] = useState(null);
+  const [filteredCards, setFilteredCards] = useState([]);
+  const [filters, setFilters] = useState({
+    label: '',
+  });
   const cardData = [
     {
       src: "/ProductTemplate/assets/abstractshirt.jpeg",
-      text: "Platinum White T",
+      text:"Platinum White T",
       description: "Classic T-shirt for men. Comfortable and stylish.",
-      label: "T-Shirt",
+      label:"T-Shirt",
     },
     {
       src: "/ProductTemplate/assets/abstractshirt.jpeg",
       text: "Platinum White T",
       description: "Trendy skinny jeans for a modern look.",
-      label: "T-Shirt",
+      label:"T-Shirt",
     },
     {
       src: "/ProductTemplate/assets/abstractshirt.jpeg",
@@ -96,20 +101,20 @@ function MensCards() {
       src: "/ProductTemplate/assets/abstractshirt.jpeg",
       text: "Platinum Leather",
       description: "Classic T-shirt for men. Comfortable and stylish.",
-      label: "Jacket",
+      label: "Jackets",
     },
     {
       src: "/ProductTemplate/assets/abstractshirt.jpeg",
       text: "Platinum Leather",
       description: "Classic T-shirt for men. Comfortable and stylish.",
-      label: "Jacket",
+      label: "Jackets",
     },
   ];
 
   useEffect(() => {
     // Preload all images
     const preloadImages = (images) => {
-      images.forEach((image) => {
+      images.forEach(image => {
         const img = new Image();
         img.src = image.src;
       });
@@ -137,16 +142,35 @@ function MensCards() {
     setselectedProduct(null);
   }
 
+  useEffect(() => {
+    setFilteredCards(cardData); // Initialize with all cards
+  }, []);
+  
+
+  useEffect(() => {
+    applyFilters();
+  }, [filters]);
+
+  const applyFilters = () => {
+    let filtered = cardData;
+
+    if (filters.label) {
+      filtered = filtered.filter(card => card.label === filters.label);
+    }
+
+    setFilteredCards(filtered);
+  };
+
   return (
     <div className="cards">
-      <div ref={ref}></div>
+      <SideMenu setFilters={setFilters} filters={filters}/>
       <div ref={cards} className={`${styles.cardsContainer}`}>
         <div
           className={`${styles.cardsWrapper} ${
             cardsInView ? styles.animationFade : styles.hidden
           }`}>
           <ul className="cardsItems">
-            {cardData.map((card, index) => (
+            {filteredCards.map((card, index) => (
               <Carditems
                 key={index}
                 product={card}

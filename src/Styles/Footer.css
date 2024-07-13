@@ -2,6 +2,7 @@
 .footer {
     background: #fff;
     padding: 50px 0 0 0;
+    border-top: 2px solid #000;
   }
   
   .footer-items{

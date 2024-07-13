@@ -1,31 +1,87 @@
-import React from 'react'
-import "../Styles/SideMenu.css"
+import React, { useState } from "react";
+import "../Styles/SideMenu.css";
 
-const SideMenu = ({filters, setFilters}) => {
+const SideMenu = ({ filters, setFilters }) => {
+  const [click, setClick] =
+  useState(false); /*creates opposite state to open and close menu on click*/
+
+  const handleClick = () => setClick(!click); /*reverses false click state set*/
+
   const handleLabelChange = (event) => {
-    setFilters(prevFilters => ({
-        ...prevFilters,
-        label: event.target.value,
-    }));
+    const { value, checked } = event.target;
+    setFilters((prevFilters) => {
+      if (checked) {
+        return {
+          ...prevFilters,
+          label: [...prevFilters.label, value],
+        };
+      } else {
+        return {
+          ...prevFilters,
+          label: prevFilters.label.filter((label) => label !== value),
+        };
+      }
+    });
   };
 
   return (
-    <div className='side-menu'>
-      <h2>Filter Options</h2>
-      <div className='filter-group'>
-        <label htmlFor="label">
-            Category
-        </label>
-        <select name="label" id="label" value={filters.label} onChange={handleLabelChange}>
-            <option value="">All</option>
-            <option value="T-Shirt">t-Shirt</option>
-            <option value="Jeans">Jeans</option>
-            <option value="Joggers">Joggers</option>
-            <option value="Jackets">Jackets</option>
-        </select>
+    <div className={click ? "side-menu active" : "side-menu"}>
+      <div className="side-menu-icon" onClick={handleClick}>
+        <i className={click ? "fas fa-times" : "fa-solid fa-filter"} />{" "}
+        {/*? is equal to true. : creates toggle from one item to another.  */}
+      </div>
+      <div className="filter-group">
+        <h2>Filter Options</h2>
+        <div className="options">
+        <label htmlFor="label" className="filter-label">Category</label>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="T-Shirt"
+              checked={filters.label.includes("T-Shirt")}
+              onChange={handleLabelChange}
+            />
+            T-Shirt
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="Jeans"
+              checked={filters.label.includes("Jeans")}
+              onChange={handleLabelChange}
+            />
+            Jeans
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="Joggers"
+              checked={filters.label.includes("Joggers")}
+              onChange={handleLabelChange}
+            />
+            Joggers
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              value="Jackets"
+              checked={filters.label.includes("Jackets")}
+              onChange={handleLabelChange}
+            />
+            Jackets
+          </label>
+          </div>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SideMenu
+export default SideMenu;

@@ -154,8 +154,8 @@ function MensCards() {
   const applyFilters = () => {
     let filtered = cardData;
 
-    if (filters.label) {
-      filtered = filtered.filter(card => card.label === filters.label);
+    if (filters.label.length > 0) {
+      filtered = filtered.filter((card) => filters.label.includes(card.label));
     }
 
     setFilteredCards(filtered);
