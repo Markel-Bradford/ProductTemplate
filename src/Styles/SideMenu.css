@@ -3,21 +3,23 @@
   width: 300px;
   height: 100vh;
   position: fixed;
-  top: 80px;
+  top: 79px;
   left: -100%;
   opacity: 1;
   transition: all 0.5s ease;
   overflow: hidden;
-  background: silver;
+  background: #fff;
   z-index: 999;
+  
 }
 
 .side-menu.active {
-  background: silver;
+  background: #fff;
   left: 52px;
   opacity: 1;
   transition: all 0.5s ease;
   z-index: 999;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.6);
 }
 
 .side-menu-icon {

@@ -8,10 +8,8 @@ import ProductInfo from '../Components/ProductInfo'
 const Main = () => {
   return (
     <div>
-      <main>
         <Hero />
         <ProductInfo />
-      </main>
     </div>
   )
 }

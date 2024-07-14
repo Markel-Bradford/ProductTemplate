@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/Hero.css"
 
 const Hero = () => {
+  
   return (
     <div className="hero-container">
       <div className="hero-text">
