@@ -16,9 +16,9 @@ const Navbar = () => {
   return (
       <nav className={'navbar'} >
         <div className="navbar-container">
-          <a href="#top" className="navbar-logo">
+          <Link to="/" className="navbar-logo">
             <img className="logo" src="/ProductTemplate/assets/pthreads.png" alt="" />
-          </a>
+          </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />{" "}
             {/*? is equal to true. : creates toggle from one item to another.  */}
