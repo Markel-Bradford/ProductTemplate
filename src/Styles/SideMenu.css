@@ -83,6 +83,11 @@
     color: #fff;
     transition: .2s;
 }
+@media screen and (max-width: 844px) {
+    .side-menu.active {
+        overflow-y: scroll;
+      }
+}
 
 @media screen and (max-width: 1800px) {
   .side-menu.active {
